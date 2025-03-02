@@ -1,0 +1,20 @@
+version: v1
+plugins:
+  # TypeScript生成用
+  - plugin: es
+    out: gen
+    opt:
+      - target=ts
+  - plugin: connect-es
+    out: gen
+    opt:
+      - target=ts
+  # Go生成用
+  - plugin: go
+    out: ../../../apps/backend/pkg
+    opt:
+      - paths=source_relative
+  - plugin: connect-go
+    out: ../../../apps/backend/pkg
+    opt:
+      - paths=source_relative
