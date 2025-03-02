@@ -22,13 +22,13 @@ importers:
     dependencies:
       '@connectrpc/connect':
         specifier: ^2.0.2
-        version: 2.0.2(@bufbuild/protobuf@1.10.0)
+        version: 2.0.2(@bufbuild/protobuf@2.2.3)
       '@connectrpc/connect-web':
         specifier: ^2.0.2
-        version: 2.0.2(@bufbuild/protobuf@1.10.0)(@connectrpc/connect@2.0.2(@bufbuild/protobuf@1.10.0))
+        version: 2.0.2(@bufbuild/protobuf@2.2.3)(@connectrpc/connect@2.0.2(@bufbuild/protobuf@2.2.3))
       '@connectrpc/protoc-gen-connect-es':
         specifier: ^1.4.0
-        version: 1.6.1(@connectrpc/connect@2.0.2(@bufbuild/protobuf@1.10.0))
+        version: 1.6.1(@connectrpc/connect@2.0.2(@bufbuild/protobuf@2.2.3))
       next:
         specifier: ^15.0.0
         version: 15.1.6(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
@@ -135,6 +135,9 @@ packages:
 
   '@bufbuild/protobuf@1.10.0':
     resolution: {integrity: sha512-QDdVFLoN93Zjg36NoQPZfsVH9tZew7wKDKyV5qRdj8ntT4wQCOradQjRaTdwMhWUYsgKsvCINKKm87FdEk96Ag==}
+
+  '@bufbuild/protobuf@2.2.3':
+    resolution: {integrity: sha512-tFQoXHJdkEOSwj5tRIZSPNUuXK3RaR7T1nUrPgbYX1pUbvqqaaZAsfo+NXBPsz5rZMSKVFrgK1WL8Q/MSLvprg==}
 
   '@bufbuild/protoplugin@1.10.0':
     resolution: {integrity: sha512-u6NE4vL0lw1+EK4/PiE/SQB7fKO4LRJNTEScIXVOi2x88K/c8WKc/k0KyEaA0asVBMpwekJQZGnRyj04ZtN5Gg==}
@@ -2117,6 +2120,8 @@ snapshots:
 
   '@bufbuild/protobuf@1.10.0': {}
 
+  '@bufbuild/protobuf@2.2.3': {}
+
   '@bufbuild/protoplugin@1.10.0':
     dependencies:
       '@bufbuild/protobuf': 1.10.0
@@ -2125,21 +2130,21 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  '@connectrpc/connect-web@2.0.2(@bufbuild/protobuf@1.10.0)(@connectrpc/connect@2.0.2(@bufbuild/protobuf@1.10.0))':
+  '@connectrpc/connect-web@2.0.2(@bufbuild/protobuf@2.2.3)(@connectrpc/connect@2.0.2(@bufbuild/protobuf@2.2.3))':
     dependencies:
-      '@bufbuild/protobuf': 1.10.0
-      '@connectrpc/connect': 2.0.2(@bufbuild/protobuf@1.10.0)
+      '@bufbuild/protobuf': 2.2.3
+      '@connectrpc/connect': 2.0.2(@bufbuild/protobuf@2.2.3)
 
-  '@connectrpc/connect@2.0.2(@bufbuild/protobuf@1.10.0)':
+  '@connectrpc/connect@2.0.2(@bufbuild/protobuf@2.2.3)':
     dependencies:
-      '@bufbuild/protobuf': 1.10.0
+      '@bufbuild/protobuf': 2.2.3
 
-  '@connectrpc/protoc-gen-connect-es@1.6.1(@connectrpc/connect@2.0.2(@bufbuild/protobuf@1.10.0))':
+  '@connectrpc/protoc-gen-connect-es@1.6.1(@connectrpc/connect@2.0.2(@bufbuild/protobuf@2.2.3))':
     dependencies:
       '@bufbuild/protobuf': 1.10.0
       '@bufbuild/protoplugin': 1.10.0
     optionalDependencies:
-      '@connectrpc/connect': 2.0.2(@bufbuild/protobuf@1.10.0)
+      '@connectrpc/connect': 2.0.2(@bufbuild/protobuf@2.2.3)
     transitivePeerDependencies:
       - supports-color
 
