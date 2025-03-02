@@ -1,0 +1,15 @@
+{
+    "name": "proto",
+    "version": "0.0.0",
+    "private": true,
+    "main": "index.js",
+    "types": "index.d.ts",
+    "scripts": {
+      "generate": "buf generate"
+    },
+    "devDependencies": {
+      "@bufbuild/buf": "^1.28.1",
+      "@bufbuild/protoc-gen-es": "^2.2.3",
+      "@connectrpc/protoc-gen-connect-es": "^1.4.0"
+    }
+  }
