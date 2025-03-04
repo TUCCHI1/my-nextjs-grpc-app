@@ -1,20 +1,28 @@
-version: v1
+# Learn more: https://buf.build/docs/configuration/v2/buf-gen-yaml
+version: v2
+# Deletes the directories specified in the `out` field for all plugins before running code generation.
+clean: true
 plugins:
   # TypeScript生成用
-  - plugin: es
+  # protoc-gen-esプラグインを使用してTypeScript型定義を生成
+  - name: es
+    path: node_modules/.bin/protoc-gen-es
     out: gen
-    opt:
-      - target=ts
-  - plugin: connect-es
+    opt: target=ts
+
+  # Connect-ESプラグインを使用してクライアントコードを生成
+  - name: connect-es
+    path: node_modules/.bin/protoc-gen-connect-es
     out: gen
-    opt:
-      - target=ts
+    opt: target=ts
+
   # Go生成用
-  - plugin: go
+  # protoc-gen-goプラグインを使用してGoのコードを生成
+  - name: go
     out: ../../../apps/backend/pkg
-    opt:
-      - paths=source_relative
-  - plugin: connect-go
+    opt: paths=source_relative
+
+  # protoc-gen-connect-goプラグインを使用してGoのサーバーコードを生成
+  - name: connect-go
     out: ../../../apps/backend/pkg
-    opt:
-      - paths=source_relative
+    opt: paths=source_relative
